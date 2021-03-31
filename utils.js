@@ -1,3 +1,12 @@
+export function findById(someArray, someId) {
+    for (let item of someArray) {
+        if (item.id === someId) {
+            return item;
+        }
+    }
+}
+
+
 export function createPets(pets) {
     const li = document.createElement('li');
 
@@ -64,4 +73,23 @@ export function createTableRow(someCartItem, somePets) {
     return tr;
 }
 
-export function
+export function createTotalRow(cartArray, petsArray) {
+    let sum = 0;
+
+    for (let cartItem of cartArray) {
+        const matchingPets = findById(petsArray, cartItem.id);
+
+        const lineItem = matchingPets.price * cartItem.quantity;
+        sum = sum + lineItem;
+    }
+    const tr = document.createElement('tr');
+    const td1 = document.createElement('td');
+    const td2 = document.createElement('td');
+    const td3 = document.createElement('td');
+
+    td3.textContent = `$${sum}.00`;
+
+    tr.append(td1, td2, td3);
+
+    return tr;
+}
