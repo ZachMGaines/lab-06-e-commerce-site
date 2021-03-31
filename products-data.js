@@ -1,5 +1,6 @@
 export const pets = [
     {
+        id: 1,
         name: 'dog',
         type: 'German Shepherd',
         color: 'grey',
@@ -9,6 +10,7 @@ export const pets = [
         price: 1000
     },
     {
+        id: 2,
         name: 'cat',
         type: 'Persian',
         color: 'white',
@@ -18,6 +20,7 @@ export const pets = [
         price: 400
     },
     {
+        id: 3,
         name: 'gecko',
         type: 'Crested Gecko',
         color: 'tan',
@@ -27,6 +30,7 @@ export const pets = [
         price: 80
     },
     {
+        id: 4,
         name: 'owl',
         type: 'Snowy owl',
         color: 'white',
@@ -36,6 +40,7 @@ export const pets = [
         price: 10000
     },
     {
+        id: 5,
         name: 'lion',
         type: 'African lion',
         color: 'brown',
@@ -44,12 +49,4 @@ export const pets = [
         image: '../assets/img/lion.jpg',
         price: 500000
     }
-
-
-
-
-
-
-
-
 ];

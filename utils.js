@@ -23,7 +23,7 @@ export function createPets(pets) {
     image.src = pets.image;
 
     const hasFur = document.createElement('p');
-    hasFur.textContent = pets.growsFur ? 'Furry!' : 'No fur.';
+    hasFur.textContent = pets.hasFur ? 'Furry!' : 'No fur.';
 
     const pPrice = document.createElement('p');
     pPrice.textContent = pets.price.toLocaleString('en-US', {
@@ -37,5 +37,4 @@ export function createPets(pets) {
     li.append(pName, pType, pSize, image, hasFur, pPrice, button);
 
     return li;
-
 }
