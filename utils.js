@@ -6,6 +6,12 @@ export function findById(someArray, someId) {
     }
 }
 
+export function calcItemTotal(price, quantity) {
+    return price * quantity;
+}
+
+
+
 
 export function createPets(pets) {
     const li = document.createElement('li');
