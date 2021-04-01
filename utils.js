@@ -1,3 +1,6 @@
+
+import { pets } from './products-data.js';
+
 export function findById(someArray, someId) {
     for (let item of someArray) {
         if (item.id === someId) {
@@ -10,7 +13,17 @@ export function calcItemTotal(price, quantity) {
     return price * quantity;
 }
 
+export function calcOrderTotal(petCart) {
+    let counter = 0;
 
+    for (let pet of petCart) {
+        const item = findById(pets, pet.id);
+        const itemPrice = item.price;
+        const petTotal = calcItemTotal(itemPrice, pet.quantity);
+        counter += petTotal;
+    }
+    return counter;
+}
 
 
 export function createPets(pets) {
