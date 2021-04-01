@@ -48,7 +48,6 @@ export function createPets(pets) {
     return li;
 }
 
-
 export function createTableRow(someCartItem, somePets) {
     const tr = document.createElement('tr');
     const tdName = document.createElement('td');
