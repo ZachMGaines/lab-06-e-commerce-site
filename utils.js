@@ -1,4 +1,4 @@
-
+import { addItemToCart } from './local-storage-utils.js';
 import { pets } from './products-data.js';
 
 export function findById(someArray, someId) {
@@ -58,9 +58,26 @@ export function createPets(pets) {
         style: 'currency',
         currency: 'USD',
     });
+
+
+
+
+
+
+
+
     const button = document.createElement('button');
 
     button.textContent = 'Add to PetCart';
+
+    button.addEventListener('click', () => {
+        addItemToCart(pets.id);
+    });
+
+
+
+
+
 
     li.append(pName, pType, pSize, image, hasFur, pPrice, button);
 
