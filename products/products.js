@@ -7,3 +7,4 @@ for (let pet of pets) {
     const li = createPets(pet);
     ul.append(li);
 }
+
