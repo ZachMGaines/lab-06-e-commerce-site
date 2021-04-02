@@ -28,3 +28,4 @@ test('calculate items in cart full total', (expect) => {
 
     expect.equal(actual, expected);
 });
+
